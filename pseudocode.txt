@@ -1,0 +1,37 @@
+proses_order_Makanan_dan_Minuman
+
+Deklarasi :
+var login,username, password, menu, sct_menu, price_menu, checkout
+double price, price menu, sum
+
+
+IF(login_sucses)
+	input "username"
+	input "password"
+DISPLAY "menu"
+ELSE(login_failed)
+DISPLAY "login"
+
+
+DISPLAY "menu"
+input "sct_menu"
+input "sum"
+IF(sct_menu>0,sum>0)
+	DISPLAY "Checkout"
+ELSE
+	WRITE "checkout failed" and DISPLAY"menu"
+
+
+DISPLAY "checkout"
+WRITE price = price_menu*sum
+WRITE "price"
+
+IF "transfer" 
+	DISPLAY "payment code"
+	DISPLAY "order"
+ELSE "cash"
+	DISPLAY "order"
+
+END
+
+
