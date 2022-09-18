@@ -2,35 +2,63 @@ proses_order_Makanan_dan_Minuman
 
 Deklarasi :
 var login,username, password, menu, sct_menu, price_menu, checkout
-double price, price menu, sum
+double price, price menu, sum, order
+int pil
 
+WRITE login
+WRITE register
 
-IF(login_sucses)
-	input "username"
-	input "password"
-DISPLAY "menu"
-ELSE(login_failed)
+WHILE (pil>=0)
+SWITCH(pil)
+
+CASE 1 :
 DISPLAY "login"
 
+CASE 2:
+DISPLAY "register"
 
+--LOGIN--
+
+int i=1
+do{
+display (username) input "username"
+display (password) input "password
+IF(username=username && password== password)
+WRITE login = sucses	
+DISPLAY "menu"
+i=4
+
+ELSE{
+WRITE username/password salah
+DISPLAY "login"
+i=i+1
+
+WHILE(i<=3)
+
+if(login != sucses
+WRITE "anda telah 3x salah login, silahkan coba lagi dalam waktu 24 jam"
+DISPLAY "login"
+
+--MENU--
 DISPLAY "menu"
 input "sct_menu"
 input "sum"
+
 IF(sct_menu>0,sum>0)
+	WRITE price = price_menu*sum
+	WRITE "price"
 	DISPLAY "Checkout"
 ELSE
 	WRITE "checkout failed" and DISPLAY"menu"
 
-
-DISPLAY "checkout"
-WRITE price = price_menu*sum
-WRITE "price"
-
+--CHECKOUT--
 IF "transfer" 
 	DISPLAY "payment code"
 	DISPLAY "order"
-ELSE "cash"
+ELSE IF "cash"
 	DISPLAY "order"
+ELSE 
+	WRITE "Menu pembayaran belum di pilih"
 
 END
 
